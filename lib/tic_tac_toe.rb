@@ -42,8 +42,11 @@ class TicTacToe
   def turn
     puts "What up, wass your movings?"
 
-    input = gets
+    input = gets.to_i
 
-    
+    index = input_to_index(input)
+
+
+
   end
 end
