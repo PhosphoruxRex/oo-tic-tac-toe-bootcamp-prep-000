@@ -21,9 +21,17 @@ class TicTacToe
   def move(index, token="X")
     index = input_to_index(index)
     if (index >= 0) && (index <= 10)
-      board[index] = token
+      @board[index] = token
     else
       move(index, token)
+    end
+  end
+
+  def position_taken?(index)
+    if @board[index]
+      false
+    else
+      true
     end
   end
 end
