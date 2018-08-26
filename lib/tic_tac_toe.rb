@@ -20,7 +20,7 @@ class TicTacToe
 
   def move(index, token="X")
     index = input_to_index(index)
-    if (index >= 0) && (index <= 10)
+    if valid_move?(index)
       @board[index] = token
     else
       move(index, token)
@@ -35,10 +35,11 @@ class TicTacToe
 
   def valid_move?(index)
     if (index >= 0) && (index <= 8) && !position_taken?(index)
-
-    else
-
+      true
     end
+  end
 
+  def method_name
+    
   end
 end
