@@ -19,12 +19,7 @@ class TicTacToe
   end
 
   def move(index, token="X")
-    index = input_to_index(index)
-    if valid_move?(index)
-      @board[index] = token
-    else
-      move(index, token)
-    end
+    @board[index] = token
   end
 
   def position_taken?(index)
@@ -46,7 +41,31 @@ class TicTacToe
 
     index = input_to_index(input)
 
+    if valid_move?(index)
+      move(index, token)
+    else
+      turn
+    end
+  end
 
+  def turn_count
+    count = 0
+    for x in @board do
+      if x == "O" || x == "X"
+        count += 1
+      end
+    end
+  end
 
+  def current_player
+    if turn_count % 2 == 0
+      "X"
+    else
+      "O"
+    end
+  end
+
+  def method_name
+    
   end
 end
