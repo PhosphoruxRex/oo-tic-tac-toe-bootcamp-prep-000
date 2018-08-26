@@ -39,7 +39,11 @@ class TicTacToe
     end
   end
 
-  def method_name
+  def turn
+    puts "What up, wass your movings?"
+
+    input = gets
+
     
   end
 end
