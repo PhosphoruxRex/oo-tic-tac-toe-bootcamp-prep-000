@@ -14,6 +14,10 @@ class TicTacToe
     [2,4,6]
   ]
 
+  def display_board
+    @board
+  end
+
   def input_to_index(val)
     val-1
   end
