@@ -14,4 +14,16 @@ class TicTacToe
     [2,4,6]
   ]
 
+  def input_to_index(val)
+    val-1
+  end
+
+  def move(index, token="X")
+    index = input_to_index(index)
+    if (index >= 0) && (index <= 10)
+      board[index] = token
+    else
+      move(index, token)
+    end
+  end
 end
