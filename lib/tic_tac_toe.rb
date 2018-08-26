@@ -3,5 +3,5 @@ class TicTacToe
     @board = board
   end
 
-  
+
 end
